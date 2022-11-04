@@ -131,8 +131,11 @@ This technique is in fact the basic premise of machine learning. You can take a 
 Here we've looked at:
 
 1.What an outlier is and how to remove them
+
 2.How data can be skewed
+
 3.How to look at the spread of data
+
 4.Basic ways to compare variables, such as grades and study time
 
 
