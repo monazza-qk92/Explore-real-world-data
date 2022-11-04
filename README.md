@@ -19,9 +19,6 @@ For learning purposes we have just treated the value 1 is a true outlier here an
 
 When we have more data available, our sample becomes more reliable. This makes it easier to consider outliers as being values that fall below or above percentiles within which most of the data lie. For example, the following code uses the Pandas quantile function to exclude observations below the 0.01th percentile (the value above which 99% of the data reside).
 
-![image](https://user-images.githubusercontent.com/79583184/200016180-74cdf436-724b-401c-9a1a-e795e489069c.png)
-
-
 ![image](https://user-images.githubusercontent.com/79583184/200017362-fb8f7f52-7c2c-4153-ad08-2d8f2e6c48f7.png)
 
 With the outliers removed, the box plot shows all data within the four quartiles. Note that the distribution is not symmetric like it is for the grade data though - there are some students with very high study times of around 16 hours, but the bulk of the data is between 7 and 13 hours; The few extremely high values pull the mean towards the higher end of the scale.
