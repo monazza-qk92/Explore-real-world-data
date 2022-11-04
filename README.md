@@ -7,6 +7,7 @@ Last time, we looked at grades for our student data, and investigated this visua
 Last time, we looked at grades for our student data, and estimated from this sample what the full population of grades might look like. Just to refresh, lets take a look at this data again.
 
 ![image](https://user-images.githubusercontent.com/79583184/200015910-838f954f-5be2-426b-a579-c26cad4da362.png)
+
 The distribution of the study time data is significantly different from that of the grades.
 
 Note that the whiskers of the box plot only begin at around 6.0, indicating that the vast majority of the first quarter of the data is above this value. The minimum is marked with an o, indicating that it is statistically an outlier - a value that lies significantly outside the range of the rest of the distribution.
@@ -24,6 +25,7 @@ When we have more data available, our sample becomes more reliable. This makes i
 With the outliers removed, the box plot shows all data within the four quartiles. Note that the distribution is not symmetric like it is for the grade data though - there are some students with very high study times of around 16 hours, but the bulk of the data is between 7 and 13 hours; The few extremely high values pull the mean towards the higher end of the scale.
 
 Let's look at the density for this distribution.
+
 ![image](https://user-images.githubusercontent.com/79583184/200017449-1b40179b-e978-4d0d-9e1b-88aadc3bca07.png)
 
 This kind of distribution is called right skewed. The mass of the data is on the left side of the distribution, creating a long tail to the right because of the values at the extreme high end; which pull the mean to the right.
@@ -79,18 +81,22 @@ The data includes two numeric variables (StudyHours and Grade) and two categoric
 To make this comparison, let's create box plots showing the distribution of StudyHours for each possible Pass value (true and false).
 
 ![image](https://user-images.githubusercontent.com/79583184/200018624-8ab78a1b-6482-4533-84a2-d40150597676.png)
+
 Now let's compare two numeric variables. We'll start by creating a bar chart that shows both grade and study hours.
+
 ![image](https://user-images.githubusercontent.com/79583184/200019367-1808832c-02d8-4bf8-ad5c-064ea4092e0d.png)
 
 The chart shows bars for both grade and study hours for each student; but it's not easy to compare because the values are on different scales. Grades are measured in grade points, and range from 3 to 97; while study time is measured in hours and ranges from 1 to 16.
 
 A common technique when dealing with numeric data in different scales is to normalize the data so that the values retain their proportional distribution, but are measured on the same scale. To accomplish this, we'll use a technique called MinMax scaling that distributes the values proportionally on a scale of 0 to 1. You could write the code to apply this transformation; but the Scikit-Learn library provides a scaler to do it for you.
+
 ![image](https://user-images.githubusercontent.com/79583184/200019470-7ac5c795-5231-4a94-ac77-ca99fbb12f92.png)
 
 
 With the data normalized, it's easier to see an apparent relationship between grade and study time. It's not an exact match, but it definitely seems like students with higher grades tend to have studied more.
 
 So there seems to be a correlation between study time and grade; and in fact, there's a statistical correlation measurement we can use to quantify the relationship between these columns.Another way to visualise the apparent correlation between two numeric columns is to use a scatter plot.
+
 ![image](https://user-images.githubusercontent.com/79583184/200019742-8e4c6c9f-dea1-439c-91e8-adfa3ba79bbe.png)
 
 Again, it looks like there's a discernible pattern in which the students who studied the most hours are also the students who got the highest grades.
@@ -124,10 +130,10 @@ This technique is in fact the basic premise of machine learning. You can take a 
 ## Summary
 Here we've looked at:
 
-What an outlier is and how to remove them
-How data can be skewed
-How to look at the spread of data
-Basic ways to compare variables, such as grades and study time
+1.What an outlier is and how to remove them
+2.How data can be skewed
+3.How to look at the spread of data
+4.Basic ways to compare variables, such as grades and study time
 
 
 
